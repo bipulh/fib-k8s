@@ -12,5 +12,5 @@ docker push bipulh/fibonacci-worker:$GIT_SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=bipulh/fibonacci-server:$GIT_SHA
-kubectl set image deployments/client-deployment server=bipulh/fibonacci-client:$GIT_SHA
-kubectl set image deployments/worker-deployment server=bipulh/fibonacci-worker:$GIT_SHA
+kubectl set image deployments/client-deployment client=bipulh/fibonacci-client:$GIT_SHA
+kubectl set image deployments/worker-deployment worker=bipulh/fibonacci-worker:$GIT_SHA
